@@ -1,4 +1,4 @@
-React-Calculator
+React-FCC-Calculator
 =====================
 
 A minimal calculator application built for Freecodecamp Front End project that uses [MobX](https://mobxjs.github.io/mobx) with [React](https://facebook.github.io/react), along with [Semantic UI](http://semantic-ui.com/).

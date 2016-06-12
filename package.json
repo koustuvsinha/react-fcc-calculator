@@ -1,14 +1,14 @@
 {
-  "name": "mobx-react-boilerplate",
+  "name": "react-fcc-calculator",
   "version": "1.0.0",
-  "description": "Boilerplate for MobX + React project with JSX, ES6 compilation and hot code reloading",
+  "description": "FCC Front End project Calculator, made with React and Mobx",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mobxjs/mobx-react-boilerplate.git"
+    "url": "https://github.com/koustuvsinha/react-fcc-calculator.git"
   },
   "keywords": [
     "react",
@@ -17,7 +17,7 @@
     "mobx",
     "starter-kit"
   ],
-  "author": "Michel Weststrate <mweststrate@gmail.com> (http://github.com/mweststrate)",
+  "author": "Koustuv Sinha (@koustuvsinha)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mobxjs/mobx/issues"
