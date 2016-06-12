@@ -4,7 +4,8 @@
   "description": "FCC Front End project Calculator, made with React and Mobx",
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "build" : "webpack --progress -p"
   },
   "repository": {
     "type": "git",
