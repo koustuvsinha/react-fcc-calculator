@@ -17,6 +17,7 @@ const boardState =  new class BoardState {
 
     append(val) {
     	if(this.comFlag) {
+    		this.cache = this.sum;
 				this.sum = '0';
 				this.comFlag = false;
 			}
@@ -33,10 +34,12 @@ const boardState =  new class BoardState {
     		this.sum = this.sum.slice(0,-1);
     		this.dotFlag = false;
     	}
+    	if(this.sum.length == 0) this.sum = '0';
     }
 
     clear() {
     	this.sum = '0';
+    	this.cache = '0';
     	this.dotFlag = false;
     	this.comFlag = false;
     }
@@ -53,7 +56,6 @@ const boardState =  new class BoardState {
 				}
 			}
 			this.comFlag = true;
-			this.cache = this.sum;
     }
 
     process(op) {
