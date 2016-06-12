@@ -44,6 +44,8 @@ const boardState =  new class BoardState {
     addCommand(command) {
     	if(command === "=" && this.commandQ.length > 0) {
     		this.process(this.commandQ.shift());
+    	} else if(command === "%" && this.commandQ.length > 0) {
+    		this.process("%");
     	} else {
 	    	this.commandQ.push(command);
 	    	if(this.commandQ.length > 1) {
@@ -69,6 +71,11 @@ const boardState =  new class BoardState {
     		case '/':
     			this.sum = (parseFloat(this.cache) / parseFloat(this.sum)) + '';
     		break;
+    		case '%':
+    			this.sum = (parseFloat(this.sum) / 100) + '';
+    			this.process(this.commandQ.shift());
+    		break;
+
     	}
     	console.log('Sum = ' + this.sum, 'Cache = ' + this.cache);
     }

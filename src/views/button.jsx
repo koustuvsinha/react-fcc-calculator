@@ -40,6 +40,7 @@ export default class Button extends Component {
   				case '*':
   				case '/':
   				case '=':
+  				case '%':
   					this.props.boardState.addCommand(this.props.title);
   				break;
   			}
