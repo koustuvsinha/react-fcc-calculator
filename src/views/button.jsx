@@ -22,7 +22,7 @@ export default class Button extends Component {
   updateBoard() {
   	switch(this.props.type) {
   		case 'num':
-  			this.props.boardState.append(parseInt(this.props.title));
+  			this.props.boardState.append(this.props.title);
   		break;
   		case 'cntrl':
   			switch(this.props.title) {
@@ -31,6 +31,9 @@ export default class Button extends Component {
   				break;
   				case 'AC':
   					this.props.boardState.clear();
+  				break;
+  				case '.':
+  					this.props.boardState.dotFlag = true;
   				break;
   			}
   		break;
