@@ -11,7 +11,7 @@ export default class Button extends Component {
 
 	render() {
         return (
-            <button className="ui fluid secondary button" onClick={this.updateBoard}>{this.props.title}</button>
+            <button className="ui fluid secondary button calc-button" onClick={this.updateBoard}>{this.props.title}</button>
         )
   }
 
