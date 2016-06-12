@@ -35,6 +35,13 @@ export default class Button extends Component {
   				case '.':
   					this.props.boardState.dotFlag = true;
   				break;
+  				case '+':
+  				case '-':
+  				case '*':
+  				case '/':
+  				case '=':
+  					this.props.boardState.addCommand(this.props.title);
+  				break;
   			}
   		break;
   	}
