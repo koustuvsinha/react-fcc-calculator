@@ -7,48 +7,19 @@ require("./sass/main.scss");
 import $ from 'jquery'
 import Calculator from './views/calculator'
 
-/**
-const appState =  new class AppState {
-    @observable timer = 0;
-    
-    constructor() {
-        setInterval(() => {
-            appState.timer += 1;
-        }, 1000);
-    }
-    
-    resetTimer() {
-        this.timer = 0;
-    }
-}();
-
-@observer
-class TimerView extends Component {
-     render() {
-        return (
-            <div className="container">
-                <button onClick={this.onReset}>
-                    Seconds passed: {this.props.appState.timer}
-                </button>
-                <DevTools />
-            </div>
-        );
-     }
-
-     onReset = () => {
-     	this.props.appState.resetTimer();
-     }
-};
-
-ReactDOM.render(<TimerView appState={appState} />, document.getElementById('root'));
-**/
-
-
 class CalculatorView extends Component {
     render() {
         return (
-            <div className="ui raised very padded text container segment">
-                <Calculator/>
+            <div>
+                <div className="ui raised very padded text container segment">
+                    <Calculator/>
+                </div>
+                <div className="ui container text">
+                <hr/>
+                <span className="footer">
+                    Built with <a href="https://facebook.github.io/react/index.html">React</a>, <a href="https://github.com/mobxjs/mobx">Mobx</a> & <a href="http://semantic-ui.com/">Semantic-UI</a>
+                </span>
+                </div>
             </div>
         )
     }
