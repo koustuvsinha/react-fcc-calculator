@@ -11,7 +11,7 @@ export default class Calculator extends Component {
                 <h2 className="page-title">JavaScript Calculator</h2>
                 <hr/>
                 <DisplayBoard boardState={boardState}/>
-                <CalculatorPad/>
+                <CalculatorPad boardState={boardState}/>
             </div>
         )
     }

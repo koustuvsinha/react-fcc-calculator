@@ -3,13 +3,27 @@ import ReactDOM from 'react-dom';
 
 export default class Button extends Component {
 
+	constructor(props) {
+		super(props);
+		// bind this for props to work in the function
+		this.updateBoard = this.updateBoard.bind(this);
+	}
+
 	render() {
         return (
-            <button className="ui fluid secondary button">{this.props.title}</button>
+            <button className="ui fluid secondary button" onClick={this.updateBoard}>{this.props.title}</button>
         )
   }
 
   propTypes = {
   	title: React.PropTypes.string.isRequired
+  }
+
+  updateBoard() {
+  	switch(this.props.type) {
+  		case 'num':
+  			this.props.boardState.update(parseInt(this.props.title));
+  		break;
+  	}
   }
 }
