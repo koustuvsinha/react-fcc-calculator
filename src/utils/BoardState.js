@@ -10,6 +10,18 @@ const boardState =  new class BoardState {
     update(val) {
     	this.sum = val;
     }
+
+    append(val) {
+    	this.sum = this.sum * 10 + val;
+    }
+
+    pop() {
+    	this.sum = Math.floor(this.sum / 10);
+    }
+
+    clear() {
+    	this.sum = 0;
+    }
 }();
 
 export default boardState;

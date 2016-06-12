@@ -7,7 +7,7 @@ export default class DisplayBoard extends Component {
 	render() {
         return (
             <div className="ui input fluid">
-                <input type="textbox" readOnly="readonly" value={this.props.boardState.sum}/>
+                <input type="textbox" readOnly="readonly" className="display-board" value={this.props.boardState.sum}/>
             </div>
         )
     }
